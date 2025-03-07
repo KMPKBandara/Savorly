@@ -1,10 +1,11 @@
 import React from "react";
+import FoodItem from "./FoodItem";
 
 const FoodList = ({ foodData }) => {
   return (
     <div>
       {foodData.map((food) => (
-        <h1>{food.title}</h1>
+        <FoodItem key={food.id} food={food} />
       ))}
     </div>
   );
