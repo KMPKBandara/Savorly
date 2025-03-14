@@ -1,26 +1,7 @@
-/* import React, { useEffect } from "react";
-
-const FoodDetails = ({ foodId }) => {
-  const URL = `https://api.spoonacular.com/recipes/${foodId}/information`;
-  const API_KEY = "cb2f64834c80463daafb44a5a8009955";
-  useEffect(() => {
-    async function fetchFood() {
-      const res = await fetch(`${URL}?apiKey=${API_KEY}`);
-      const data = await res.json();
-      console.log(data);
-    }
-    fetchFood();
-  }, []);
-  return <div>Food Details {foodId}</div>;
-};
-
-export default FoodDetails;
-*/
-
 import React, { useEffect, useState } from "react";
 
 const FoodDetails = ({ foodId }) => {
-  const [food, setFood] = useState({});
+  const [food, setFood] = useState(null);
   const API_KEY = "cb2f64834c80463daafb44a5a8009955";
   const URL = `https://api.spoonacular.com/recipes/${foodId}/information`;
 
@@ -42,11 +23,43 @@ const FoodDetails = ({ foodId }) => {
     fetchFood();
   }, [foodId]);
 
+  if (!food) return <div>Loading... 🤔</div>;
+
   return (
     <div>
-      Food Details: {foodId}
-      {food.title}
-      <img src={food.image} alt="" />
+      <div>
+        <h1>{food.title}</h1>
+        <img src={food.image} alt={food.title} />
+        <div>
+          <span>
+            <strong>⏱️ {food.readyInMinutes} Minutes</strong>
+          </span>
+          <span>
+            👨‍👩‍👧‍👦 <strong>Serves {food.servings}</strong>
+          </span>
+          <span>{food.vegetarian ? "🥕 Vegetarian" : "🍖 Non-Vegetarian"}</span>
+          <span>{food.vegan ? "🐄 Vegan" : ""}</span>
+        </div>
+        <div>
+          💰{" "}
+          <span>
+            ${((food.pricePerServing || 0) / 100).toFixed(2)} per serving
+          </span>
+        </div>
+      </div>
+
+      <div>
+        <h2>Instructions</h2>
+        {food.analyzedInstructions?.length > 0 ? (
+          <ol>
+            {food.analyzedInstructions[0].steps.map((step, index) => (
+              <li key={index}>{step.step}</li>
+            ))}
+          </ol>
+        ) : (
+          <p>No instructions available.</p>
+        )}
+      </div>
     </div>
   );
 };
