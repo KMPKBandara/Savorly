@@ -22,11 +22,10 @@ Easily search for recipes, browse categories like 🍕 Pizza, 🍚 Rice, 🍜 No
 ---
 
 ## 🖼️ Preview
-
-![alt text](<Screenshot 2025-03-15 142444.png>)
-![alt text](<Screenshot 2025-03-15 142508.png>)
-![alt text](<Screenshot 2025-03-15 142528.png>)
-![alt text](<Screenshot 2025-03-15 142623.png>)
+![Screenshot 2025-03-15 142444](https://github.com/user-attachments/assets/84313349-7120-4702-b47c-32d4466e3f94)
+![Screenshot 2025-03-15 142508](https://github.com/user-attachments/assets/8ad0cd59-3ab3-4e2b-bd4e-cdd87fc2f07a)
+![Screenshot 2025-03-15 142528](https://github.com/user-attachments/assets/635765a6-54d0-4862-9255-5dc55351bf10)
+![Screenshot 2025-03-15 142623](https://github.com/user-attachments/assets/a2d04749-5397-43b1-9a26-9c7d9fdfe37a)
 
 ---
 
