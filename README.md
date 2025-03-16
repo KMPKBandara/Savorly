@@ -117,7 +117,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 💬 Contact
 
-Made with ❤️ by [Your Name]  
-Feel free to connect: [LinkedIn](https://linkedin.com/in/yourname) | [Twitter](https://twitter.com/yourhandle)
+Made with ❤️ by Pramuditha Bandara  
+Feel free to connect: [LinkedIn](linkedin.com/in/pramuditha-bandara-897717251) | [E-mail](kmpkbandara@std.appsc.sab.ac.lk)
 
 ---
